@@ -1,0 +1,6 @@
+CREATE TABLE tasks(
+`id` int AUTO_INCREMENT not null PRIMARY KEY,
+`text` varchar(200) not null,
+done tinyint(1) DEFAULT 0,
+`comment` text
+)
