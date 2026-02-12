@@ -1,5 +1,25 @@
 body{
     margin: 0px;
-    height: 100dvh;
-    background-image: linear-gradient(rgb(174, 0, 255),rgb(255, 115, 0));
+    height: 200dvh;
+    background-image: url(img/pexels-pixabay-235985.jpg);
+    background-size: cover;
+
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10%px;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    background: transparent;
+    backdrop-filter: blur(2px);
+    
+}
+
+header h1{
+    font-size: 3em;
+    margin: 0px;
 }
