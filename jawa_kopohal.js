@@ -6,3 +6,5 @@ function done(id){
         document.getElementById("done" + id).innerHTML = "☐"
     }
 }
+
+//ezt akarom atirni htmlbe az onlcick(done(0)) helyett
