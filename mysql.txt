@@ -8,7 +8,7 @@ CREATE TABLE tasks(
 `name` varchar(200) not null,
 `comment` varchar(200),
 `icon` varchar(20),
-`done` tinyint(1) DEFAULT 0,
+`done` set('&#x2610;','&#x2611;') DEFAULT '&#x2610;',
 `time` timestamp not null DEFAULT CURRENT_TIMESTAMP,
 `starred` tinyint(1) DEFAULT 0
 );

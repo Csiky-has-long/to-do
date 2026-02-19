@@ -65,9 +65,59 @@ footer{
 }
 
 .lista{
+    
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100%;
+}
+
+.lista th{
+    border: black solid 1px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.lista td{
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+#done{
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .egesz{
+        width: 90%;
+    }
+
+    .iras{
+        flex-direction: column;
+    }
+
+    .lista th{
+        font-size: 1rem;
+        padding : 0px;
+        border: none;
+        border-radius: 0px;
+        border-bottom:solid black 1px;
+        border-left: dotted black 1px;
+    }
+    .lista td{
+        font-size: 1rem;
+        padding: 0px;
+        border-left: solid black 1px;
+        
+    }
+   
 }

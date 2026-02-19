@@ -28,6 +28,7 @@
             <option value="&#xf0f3;">&#xf0f3;</option>
             <option value="&#x2691;">&#x2691;</option>
             <option value="&#x2708;">&#x2708;</option>
+            <option value="&#x24;">&#x24;</option>
         </select>
         <input type="submit">
     </form>
@@ -56,7 +57,7 @@
         $result = $conn-> query($sql);
         if ($result-> num_rows > 0) {
             while ($row = $result-> fetch_assoc()) {
-                echo "<tr><td>". $row["icon"] ."</td><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["comment"] ."</td><td>". $row["time"]. "</td><td>" .$row["done"]. "</td></tr>";
+                echo "<tr><td>". $row["icon"] ."</td><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["comment"] ."</td><td>". $row["time"]. '</td><td id="done" onclick="done(' .$row["id"]. ')">' .$row["done"]. "</td></tr>";
             }
             echo "</table>";
 
@@ -78,5 +79,8 @@
 
 
 </footer>
+
+<script src="jawa_kopohal.js"></script>
+
 </body>
 </html>
