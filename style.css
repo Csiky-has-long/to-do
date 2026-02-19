@@ -62,5 +62,12 @@ footer{
    font-family: 'Lato', 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
     font-weight: 900;
   
+}
 
+.lista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
