@@ -7,7 +7,7 @@ $conn = new mysqli('localhost', 'root', 'mysql', 'to_do');
 if ($conn->connect_error) {
     die("Connection Failed: " . $conn->connect_error);
 } else {
-    $stmt = $conn->prepare("INSERT INTO users(name, comment, icon) VALUES(?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO tasks(name, comment, icon) VALUES(?, ?, ?)");
     $stmt->bind_param("sss", $name, $comment, $icon);
     $execval = $stmt->execute();
     
