@@ -19,7 +19,7 @@
     <div class="egesz">
 
     <form class="iras" method="post" action="submit.php">
-        <input type="text" name="name" placeholder="*Add a task...">
+        <input type="text" name="name" placeholder="*Add a task..." required>
         <input type="text" name="comment" placeholder="Add a comment...">
         
         <select name="icon" id="icon"  class="fa">
