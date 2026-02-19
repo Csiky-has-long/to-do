@@ -6,9 +6,9 @@ use to_do;
 CREATE TABLE tasks(
 `id` int AUTO_INCREMENT not null PRIMARY KEY,
 `text` varchar(200) not null,
-`comment` text
+`comment` varchar(200),
 `icon` set('0','1','2','3','4'),
 `done` tinyint(1) DEFAULT 0,
-`time` timestamp not null DEFAULT CURRENT_TIMESTAMP
-`starred` tinyint(1) DEFAULT 0,
-)
+`time` timestamp not null DEFAULT CURRENT_TIMESTAMP,
+`starred` tinyint(1) DEFAULT 0
+);
