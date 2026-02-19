@@ -57,7 +57,7 @@
         $result = $conn-> query($sql);
         if ($result-> num_rows > 0) {
             while ($row = $result-> fetch_assoc()) {
-                echo "<tr><td>". $row["icon"] ."</td><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["comment"] ."</td><td>". $row["time"]. '</td><td id="done" onclick="done(' .$row["id"]. ')">' .$row["done"]. "</td></tr>";
+                echo "<tr><td>". $row["icon"] ."</td><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["comment"] ."</td><td>". $row["time"]. '</td><td id="done'. $row["id"] .'" onclick="done(' .$row["id"]. ')">' .$row["done"]. "</td></tr>";
             }
             echo "</table>";
 

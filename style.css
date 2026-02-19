@@ -80,11 +80,13 @@ footer{
     border-radius: 10px;
     font-size: 1.5rem;
     padding: 10px;
+    word-wrap: break-word;
 }
 
 .lista td{
     font-size: 1.5rem;
     padding: 10px;
+    word-wrap: break-word;
 }
 
 a{
