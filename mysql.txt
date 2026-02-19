@@ -7,7 +7,8 @@ CREATE TABLE tasks(
 `id` int AUTO_INCREMENT not null PRIMARY KEY,
 `text` varchar(200) not null,
 `done` tinyint(1) DEFAULT 0,
-`icon` set('1','2','3','4'),
+`time` timestamp not null DEFAULT CURRENT_TIMESTAMP
+`icon` set('0','1','2','3','4'),
 `starred` tinyint(1) DEFAULT 0,
 `comment` text
 )
