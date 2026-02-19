@@ -1,6 +1,13 @@
+DROP database if exists to_do;
+create database if not exists to_do default character set utf8mb4 collate utf8mb4_hungarian_ci;
+use to_do;
+
+
 CREATE TABLE tasks(
 `id` int AUTO_INCREMENT not null PRIMARY KEY,
 `text` varchar(200) not null,
-done tinyint(1) DEFAULT 0,
+`done` tinyint(1) DEFAULT 0,
+`icon` set('1','2','3','4'),
+`starred` tinyint(1) DEFAULT 0,
 `comment` text
 )
