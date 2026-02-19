@@ -5,7 +5,7 @@ use to_do;
 
 CREATE TABLE tasks(
 `id` int AUTO_INCREMENT not null PRIMARY KEY,
-`text` varchar(200) not null,
+`name` varchar(200) not null,
 `comment` varchar(200),
 `icon` varchar(20),
 `done` tinyint(1) DEFAULT 0,
