@@ -25,7 +25,7 @@
         <select name="icon" id="icon"  class="fa">
             <option value="0">----</option>
             <option value="&#x2709;">&#x2709;</option>
-            <option value="&#xf0f3;">&#xf0f3;</option>
+            <option value="&#x270E;">&#x270E;</option>
             <option value="&#x2691;">&#x2691;</option>
             <option value="&#x2708;">&#x2708;</option>
             <option value="&#x24;">&#x24;</option>
@@ -57,7 +57,13 @@
         $result = $conn-> query($sql);
         if ($result-> num_rows > 0) {
             while ($row = $result-> fetch_assoc()) {
-                echo "<tr><td>". $row["icon"] ."</td><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["comment"] ."</td><td>". $row["time"]. '</td><td id="done'. $row["id"] .'" onclick="done(' .$row["id"]. ')">' .$row["done"]. "</td></tr>";
+                echo "<tr><td>". $row["icon"] ."</td><td>"; 
+                if($row['starred'] == 1) {
+                        echo "&#x272D;";
+                    }
+                else 
+                    {echo " ";}
+                echo "</td><td>". $row["name"] ."</td><td>". $row["comment"] ."</td><td>". $row["time"]. '</td><td id="done'. $row["id"] .'" onclick="done(' .$row["id"]. ')" style="cursor:pointer;">' .$row["done"]. "</td></tr>";
             }
             echo "</table>";
 
