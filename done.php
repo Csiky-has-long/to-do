@@ -17,8 +17,20 @@ if ($conn->connect_error) {
 
             $stmt = $conn->prepare("UPDATE tasks SET done = ? WHERE id = ?");
             $stmt->bind_param("si", $value, $id);
-            $stmt->execute();
+            $execval = $stmt->execute();
         }
     }
+
+    if ($execval) {
+        
+        header("Location: index.php");
+        exit(); 
+    } else {
+        
+        echo "Registration failed. Please try again.";
+    }
+
+    $stmt->close();
+    $conn->close();
 }
 ?>
