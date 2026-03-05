@@ -23,7 +23,7 @@
         <input type="text" name="comment" placeholder="Add a comment...">
         
         <select name="icon" id="icon"  class="fa">
-            <option value="0">----</option>
+            <option value="-">----</option>
             <option value="&#x2709;">&#x2709;</option>
             <option value="&#x270E;">&#x270E;</option>
             <option value="&#x2691;">&#x2691;</option>
