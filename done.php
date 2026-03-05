@@ -1,16 +1,26 @@
 <?php
-$name = $_POST['name'];
-$comment = $_POST['comment'];
-$icon = $_POST['icon'];
+
+$id = intval($_POST['id']);
+    $value = $_POST['value'];
 
 $conn = new mysqli('localhost', 'root', 'mysql', 'to_do');
+
 if ($conn->connect_error) {
     die("Connection Failed: " . $conn->connect_error);
 } else {
-    $stmt = $conn->prepare("INSERT INTO tasks(name, comment, icon) VALUES(?, ?, ?)");
-    $stmt->bind_param("sss", $name, $comment, $icon);
-    $execval = $stmt->execute();
-    
+
+    if (isset($_POST['id']) && isset($_POST['value'])) {
+
+
+
+        if ($value === "☐" || $value === "☑") {
+
+            $stmt = $conn->prepare("UPDATE tasks SET done = ? WHERE id = ?");
+            $stmt->bind_param("si", $value, $id);
+            $execval = $stmt->execute();
+        }
+    }
+
     if ($execval) {
         
         header("Location: index.php");
@@ -19,7 +29,7 @@ if ($conn->connect_error) {
         
         echo "Registration failed. Please try again.";
     }
-    
+
     $stmt->close();
     $conn->close();
 }

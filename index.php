@@ -19,17 +19,18 @@
     <div class="egesz">
 
     <form class="iras" method="post" action="submit.php">
-        <input type="text" name="name" placeholder="*Add a task...">
+        <input type="text" name="name" placeholder="*Add a task..." required>
         <input type="text" name="comment" placeholder="Add a comment...">
         
         <select name="icon" id="icon"  class="fa">
-            <option value="0">----</option>
-            <option value="1">&#x2709;</option>
-            <option value="2">&#xf0f3;</option>
-            <option value="3">&#x2691;</option>
-            <option value="4">&#x2708;</option>
+            <option value="-">----</option>
+            <option value="&#x2709;">&#x2709;</option>
+            <option value="&#x270E;">&#x270E;</option>
+            <option value="&#x2691;">&#x2691;</option>
+            <option value="&#x2708;">&#x2708;</option>
+            <option value="&#x24;">&#x24;</option>
         </select>
-
+        <input type="submit">
     </form>
 
 
@@ -45,6 +46,7 @@
                 <th>Timestamp</th>
                 <th>Done</th>
             </tr>
+<<<<<<< HEAD
             <?php
     $conn = mysqli_connect("localhost", "root", "mysql", "to-do");
     if ($conn-> connect_error) {
@@ -55,14 +57,34 @@
     if ($result-> num_rows > 0) {
         while ($row = $result-> fetch_assoc()) {
             echo "<tr><td>". $row["icon"] ."</td><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["comment"] ."</td><td>". $row["time"]. "</td><td>" .$row["done"]. "</td></tr>";
+=======
+
+    <?php
+        $conn = mysqli_connect("localhost", "root", "mysql", "to_do");
+        if ($conn-> connect_error) {
+            die("Connection failed: " . $conn-> connect_error);
+>>>>>>> 14360fad4cd69e3e83969fc00852e74bfa44a520
         }
-        echo "</table>";
 
-    } else {
-        echo "0 results";
-    }
+        $sql = "SELECT * FROM tasks";
+        $result = $conn-> query($sql);
+        if ($result-> num_rows > 0) {
+            while ($row = $result-> fetch_assoc()) {
+                echo "<tr><td>". $row["icon"] ."</td><td>"; 
+                if($row['starred'] == 1) {
+                        echo "&#x272D;";
+                    }
+                else 
+                    {echo " ";}
+                echo "</td><td>". $row["name"] ."</td><td>". $row["comment"] ."</td><td>". $row["time"]. '</td><td id="done'. $row["id"] .'" onclick="done(' .$row["id"]. ')" style="cursor:pointer;">' .$row["done"]. "</td></tr>";
+            }
+            echo "</table>";
 
-    $conn-> close();
+        } else {
+            echo "0 results";
+        }
+
+        $conn-> close();
     ?>
         
 
@@ -76,5 +98,8 @@
 
 
 </footer>
+
+<script src="jawa_kopohal.js"></script>
+
 </body>
 </html>
