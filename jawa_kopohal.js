@@ -23,17 +23,14 @@ function done(id){
     })
     .then(response => {
         if (!response.ok) throw new Error("HTTP " + response.status);
-        return response.text();
+        return response.json(); // expect JSON now
     })
-    .then(text => {
-        console.log("done.php response:", text);
-        // optionally parse JSON if your PHP returns JSON
-        // const data = JSON.parse(text);
-        // if (data.success !== true) throw new Error("Server error");
+    .then(data => {
+        console.log("done.php response:", data);
+        if (!data.success) throw new Error("DB update failed");
     })
     .catch(err => {
         console.error("Fetch error:", err);
-        // revert UI on failure
         element.innerHTML = (newValue === "☑") ? "☐" : "☑";
         alert("Could not save change: " + err.message);
     });
