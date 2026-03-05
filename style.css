@@ -33,7 +33,7 @@ header h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 90%;
+    min-height: 90dvh;
     width: 55%;
     background-color: rgba(184, 184, 184, 0.836);
     border-radius: 40px;

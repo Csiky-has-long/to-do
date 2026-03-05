@@ -58,13 +58,7 @@
         $result = $conn-> query($sql);
         if ($result-> num_rows > 0) {
             while ($row = $result-> fetch_assoc()) {
-                echo "<tr><td>"; 
-                if($row['starred'] == 1) {
-                        echo "&#x272D;";
-                    }
-                else 
-                    {echo "&#x2730;";}
-                echo "</td><td>". $row["icon"] ."</td><td>". $row["name"] ."</td><td>". $row["comment"] ."</td><td>". $row["time"]. '</td><td id="done'. $row["id"] .'" onclick="done(' .$row["id"]. ')" style="cursor:pointer;">' .$row["done"]. "</td></tr>";
+                echo "<td id="done'. $row["id"] .'" onclick="done(' .$row["id"]. ')" style="cursor:pointer;">. $row["star"] .</td><td>". $row["icon"] ."</td><td>". $row["name"] ."</td><td>". $row["comment"] ."</td><td>". $row["time"]. '</td><td id="done'. $row["id"] .'" onclick="done(' .$row["id"]. ')" style="cursor:pointer;">' .$row["done"]. "</td></tr>";
             }
             echo "</table>";
 
