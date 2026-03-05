@@ -23,7 +23,7 @@
         <input type="text" name="comment" placeholder="Add a comment...">
         
         <select name="icon" id="icon"  class="fa">
-            <option value="-">----</option>
+            <option value=" ">----</option>
             <option value="&#x2709;">&#x2709;</option>
             <option value="&#x270E;">&#x270E;</option>
             <option value="&#x2691;">&#x2691;</option>
@@ -39,8 +39,8 @@
 
             
             <tr>
+                <th>&#x272D;</th>
                 <th>Icon</th>
-                <th>ID</th>
                 <th>Task</th>
                 <th>Comment</th>
                 <th>Timestamp</th>
@@ -57,13 +57,13 @@
         $result = $conn-> query($sql);
         if ($result-> num_rows > 0) {
             while ($row = $result-> fetch_assoc()) {
-                echo "<tr><td>". $row["icon"] ."</td><td>"; 
+                echo "<tr><td>"; 
                 if($row['starred'] == 1) {
                         echo "&#x272D;";
                     }
                 else 
-                    {echo " ";}
-                echo "</td><td>". $row["name"] ."</td><td>". $row["comment"] ."</td><td>". $row["time"]. '</td><td id="done'. $row["id"] .'" onclick="done(' .$row["id"]. ')" style="cursor:pointer;">' .$row["done"]. "</td></tr>";
+                    {echo "&#x2730;";}
+                echo "</td><td>". $row["icon"] ."</td><td>". $row["name"] ."</td><td>". $row["comment"] ."</td><td>". $row["time"]. '</td><td id="done'. $row["id"] .'" onclick="done(' .$row["id"]. ')" style="cursor:pointer;">' .$row["done"]. "</td></tr>";
             }
             echo "</table>";
 
