@@ -46,24 +46,12 @@
                 <th>Timestamp</th>
                 <th>Done</th>
             </tr>
-<<<<<<< HEAD
-            <?php
-    $conn = mysqli_connect("localhost", "root", "mysql", "to-do");
-    if ($conn-> connect_error) {
-        die("Connection failed: " . $conn-> connect_error);
-    }
-    $sql = "SELECT * FROM tasks";
-    $result = $conn-> query($sql);
-    if ($result-> num_rows > 0) {
-        while ($row = $result-> fetch_assoc()) {
-            echo "<tr><td>". $row["icon"] ."</td><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["comment"] ."</td><td>". $row["time"]. "</td><td>" .$row["done"]. "</td></tr>";
-=======
+
 
     <?php
         $conn = mysqli_connect("localhost", "root", "mysql", "to_do");
         if ($conn-> connect_error) {
             die("Connection failed: " . $conn-> connect_error);
->>>>>>> 14360fad4cd69e3e83969fc00852e74bfa44a520
         }
 
         $sql = "SELECT * FROM tasks";
