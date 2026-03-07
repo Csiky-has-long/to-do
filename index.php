@@ -33,7 +33,7 @@
             <option value="&#x2708;">&#x2708;</option>
             <option value="&#x24;">&#x24;</option>
         </select>
-        <input type="submit">
+        <input type="submit" value="Submit">
     </form>
 
 
