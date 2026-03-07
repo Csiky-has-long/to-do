@@ -36,7 +36,6 @@ header h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 85%;
     height: auto;
     width: 55%;
     background-color: rgba(184, 184, 184, 0.836);
@@ -153,7 +152,7 @@ footer{
 }
 
 .lista button:hover{
-    background-color: rgba(95, 95, 95, 0.836);
+    background-color: rgba(212, 10, 10, 0.767);
 }
 
 
