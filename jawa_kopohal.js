@@ -17,10 +17,10 @@ function star(id){
     let element = document.getElementById("star" + id);
 
     if(element.innerHTML == "✰"){
-        element.innerHTML = "✮";
+        element.innerHTML = "★";
         
     } else {
-        element.innerHTML = "✮";
+        element.innerHTML = "★";
         
     }
     
