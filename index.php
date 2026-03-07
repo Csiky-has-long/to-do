@@ -6,7 +6,10 @@
     <title>To Do</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/fabcdd91d2.js" crossorigin="anonymous"></script>
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,7 +26,7 @@
         <input type="text" name="comment" placeholder="Add a comment...">
         
         <select name="icon" id="icon"  class="fa">
-            <option value=" ">----</option>
+            <option value=" ">---</option>
             <option value="&#x2709;">&#x2709;</option>
             <option value="&#x270E;">&#x270E;</option>
             <option value="&#x2691;">&#x2691;</option>

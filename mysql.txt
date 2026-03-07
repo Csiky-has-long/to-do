@@ -10,5 +10,5 @@ CREATE TABLE tasks(
 `icon` varchar(20),
 `done` set('&#x2610;','&#x2611;') DEFAULT '&#x2610;',
 `time` timestamp not null DEFAULT CURRENT_TIMESTAMP,
-`starred` tinyint(1) DEFAULT 0
+`starred` set('✰','★') DEFAULT '✰'
 );

@@ -4,9 +4,11 @@ function done(id){
 
     if(element.innerHTML == "☐"){
         element.innerHTML = "☑";
+        element.style.color = "lime";
         
     } else {
         element.innerHTML = "☐";
+        element.style.color = "black";
         
     }
     
@@ -18,10 +20,18 @@ function star(id){
 
     if(element.innerHTML == "✰"){
         element.innerHTML = "★";
+        element.style.color = "gold";
         
     } else {
-        element.innerHTML = "★";
-        
+        element.innerHTML = "✰";
+        element.style.color = "black";
     }
+    
+}
+
+function del(id){
+
+    let element = document.getElementById("row" + id);
+    element.remove();
     
 }
