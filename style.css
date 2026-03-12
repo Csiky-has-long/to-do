@@ -33,7 +33,7 @@ header h1{
 
 .egesz{
     display: flex;
-    flex-direction: column;
+    flex-direction:S column;
     align-items: center;
     justify-content: center;
     height: auto;

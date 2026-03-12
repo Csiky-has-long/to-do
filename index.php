@@ -61,7 +61,7 @@
         $result = $conn-> query($sql);
         if ($result-> num_rows > 0) {
             while ($row = $result-> fetch_assoc()) {
-                echo '<tr id="row'. $row["id"] .'"><td id="star'. $row["id"] .'" onclick="star('. $row["id"] .')" style="cursor:pointer;">'. $row["starred"] .'</td><td>'. $row["icon"] .'</td><td>'. $row["name"] .'</td><td>'. $row["comment"] .'</td><td>'. $row["time"]. '</td><td id="done'. $row["id"] .'" onclick="done(' .$row["id"]. ')" style="cursor:pointer;">' .$row["done"]. '</td><td><button onclick="del(' .$row["id"]. ')">Delete</button></td></tr>';
+                echo '<tr id="row'. $row["id"] .'"><td id="star'. $row["id"] .'" onclick="star('. $row["id"] .')" style="cursor:pointer;"> ✰ </td><td>'. $row["icon"] .'</td><td>'. $row["name"] .'</td><td>'. $row["comment"] .'</td><td>'. $row["time"]. '</td><td id="done'. $row["id"] .'" onclick="done(' .$row["id"]. ')" style="cursor:pointer;">' .$row["done"]. '</td><td><button onclick="del(' .$row["id"]. ')">Delete</button></td></tr>';
             }
             echo "</table>";
 
