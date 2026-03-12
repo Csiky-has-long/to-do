@@ -18,12 +18,15 @@ function star(id){
 
     let element = document.getElementById("star" + id);
 
-    if(element.innerHTML == "★"){
+    if(element.innerHTML == "✰"){
+        element.innerHTML = "★";
+        element.style.color = "gold";
+        
+    } else if(element.innerHTML == "★"){
         element.innerHTML = "✰";
         element.style.color = "black";
-        
     } else {
-        element.innerHTML = "★";
+         element.innerHTML = "★";
         element.style.color = "gold";
     }
     
